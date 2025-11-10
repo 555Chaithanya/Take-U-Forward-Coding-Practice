@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int erect_pyramid(int n){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n-i-1; j++){
+            cout << ".";
+        }
+        for(int k=0; k<2*i+1; k++){
+            cout << "*";
+        }
+        for(int l=0; l<n-i-1; l++){
+            cout << ".";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int invert_pyramid(int n){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<i; j++){
+            cout << ".";
+        }
+        for(int k=0; k<2*n-2*i-1; k++){
+            cout << "*";
+        }
+        for(int l=0; l<i; l++){
+            cout << ".";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    erect_pyramid(n);
+    invert_pyramid(n);
+    return 0;
+}
